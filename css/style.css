@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-    
+    color: #333333;
 }
 
 .header {
@@ -42,7 +42,8 @@ h1 {
     position: absolute;
 }
 
-.menu__list {
+.menu__list,
+.area-country__list {
     margin:  0;
     padding: 0;
     list-style: none;
@@ -87,4 +88,222 @@ span {
     left: 10px;
     right: 0;
     top: 5px;
+}
+
+.form {
+    background: #ffffff;
+}
+
+.selection__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+}
+
+.selection__item {
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.selection__link {
+    display: block;
+    padding: 15px 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #bdbdbd;
+    text-decoration: none;
+    position: relative;
+}
+
+.selection__item:hover .selection__link {
+    color: #2d9cdb;
+}
+.selection__item:hover .selection__link::after {
+    content: "";
+    width: 80%;
+    height: 3px;
+    position: absolute;
+    background: #2d9cdb;
+    bottom: 0;
+    left: 17px;
+}
+
+.form__top {
+    position: relative;
+    border-bottom: 1px solid #bdbdbd;
+    margin-bottom: 20px;
+
+}
+
+.form__acts {
+    padding: 0 20px;
+}
+
+
+.selection__btn {
+    border: none;
+    background: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-left: 20px;
+    cursor: pointer;
+    background: url(../img/sprite.png) no-repeat
+}
+
+.selection__btn--add {
+    color: #2d9cdb;
+}
+
+.selection__btn--delete {
+    color: #d75a4a;
+}
+
+.selection__btn-block {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.selection__btn-block::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url(../img/sprite.png) no-repeat;
+    top: 4px;
+    left: 0;
+}
+
+.selection__btn-block--add::before {
+    background-position: -61px -32px;
+}
+
+.selection__btn-block--delete::before {
+    background-position: -162px -32px;
+
+}
+
+.selection__block {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    margin-right: 130px;
+    margin-bottom: 50px;
+}
+
+.selection__label {
+    margin: 0 0 0 10px;
+}
+
+.form__input {
+    position: absolute;
+    top: 25px;
+
+    color: #333333;
+    border-radius: 2px;
+    border: 1px solid #bdbdbd;
+    padding: 5px 10px;
+}
+
+.form__input--selection {
+    width: 224px;
+    box-sizing: border-box;
+}
+
+.delete {
+    position: relative;
+    right: -180px;
+    top: 18px;
+    cursor: pointer;
+}
+
+.delete::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background: #bdbdbd;
+    transform: rotate(45deg);
+}
+
+.delete::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background: #bdbdbd;
+    transform: rotate(-45deg);
+}
+
+.area {
+    border: 1px solid #bdbdbd;
+    border-radius: 2px;
+    padding: 0 15px 20px;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.area-country__item {
+    position: relative;
+    display: inline-block;
+    padding: 5px 0 5px 35px;
+    background: #f2f2f2;
+    border-radius: 20px;
+    width: 156px;
+    box-sizing: border-box;
+}
+
+.area-country__item::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    left: 9px;
+    top: 10px;
+    background: url(../img/sprite.png) no-repeat;
+}
+
+.area-country__item--tailand::before {
+    background-position: -60px -120px ;
+}
+
+.area-country__item--vietnam::before {
+    background-position: -161px -121px ;
+}
+
+.area-country__item--indonesia::before {
+    background-position: -249px -119px ;
+}
+
+.delete--country {
+    left: 80px;
+    top: -12px;
+}
+
+.ares__btn {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #2d9cdb;
+    color: #2d9cdb;
+    background: #ffffff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.ares__btn:hover {
+    background: #2d9cdb;
+    color: #ffffff;
+}
+
+.form__input--tour {
+    margin-right: 0;
+}
+
+.selection__block--tour {
 }
