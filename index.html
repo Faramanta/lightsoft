@@ -38,13 +38,113 @@
     <main class="main">
         <div class="container-in">
             <h1>Настройки интересов</h1>
+            <ul class="selection__list">
+                <li class="selection__item">
+                    <a href="#" class="selection__link">Подборка Васи</a>
+                </li>
+                <li class="selection__item">
+                    <a href="#" class="selection__link">Подборка 123</a>
+                </li>
+                <li class="selection__item">
+                    <a href="#" class="selection__link">Турция 20.03</a>
+                </li>
+                <li class="selection__item">
+                    <a href="#" class="selection__link">Подборка #1</a>
+                </li>
+            </ul>
+            <input type="submit" value="Добавить подборку">
             <form class="form">
+                <label class="selection__input">Название подборки
+                    <input type="text" value="Подборка 123">
+                </label>
+                <label class="selection__input">Ваш город
+                    <input type="text" value="Санкт-Петербург">
+                </label>
+                <p class="selection__text">Вы можете задать несколько стран или регионов для одной подборки</p>
+                <div class="area">
+                    <p class="area__text">Юго-восточная Азия</p>
+                    <ul class="area-country__list">
+                        <li class="area-country__item">Таиланд</li>
+                        <li class="area-country__item">Вьетнам</li>
+                        <li class="area-country__item">Индонезия</li>
+                    </ul>
+                </div>
+                <button class="ares__btn">Добавить регион</button>
+                <button class="ares__btn">Добавить страны</button>
 
+                <div class="tour">
+                    <label class="tour__input">Даты вылета
+                        <input type="text" value="">
+                    </label>
+                    <label class="tour__input">На сколько
+                        <input type="text" value="">
+                    </label>
+                    <label class="tour__input">Количество гостей
+                        <input type="text" value="">
+                    </label>
+                    <label class="tour__input">Стоимость тура
+                        <input type="text" value="">
+                    </label>
+                </div>
+
+                <div class="hotel">
+                    <label class="hotel__input">Категория отелей от
+                        <input type="text" value="">
+                    </label>
+                    <label class="hotel__input">Рейтинг TopHotels
+                        <input type="text" value="">
+                    </label>
+                    <label class="hotel__input">Тип питания
+                        <input type="text" value="">
+                    </label>
+                    <label class="hotel__input">Расположение
+                        <input type="text" value="">
+                    </label>
+                </div>
+                <input type="submit" value="Удалить подборку">
+                <input type="submit" value="Смотреть результаты" >
             </form>
         </div>
     </main>
 
     <footer class="footer">
+        <div class="container">
+            <div class="footer__address">
+                <h2>Туристический проект</h2>
+                <p class="footer__text">Москва, 1-й Щипковский переулок, д.1</p>
+                <a class="footer__link">Показать на карте</a>
+            </div>
+
+            <div class="footer__schedule">
+                <p class="footer__text">Время работы офиса:</p>
+                <p class="footer__text">Будни 10:00 - 21:00</p>
+                <p class="footer__text">Выходные и праздники 11:00 - 17:00</p>
+            </div>
+
+            <div class="footer__contacts">
+                <p class="footer__text">+7 495 585 55 55</p>
+                <a class="footer__link">Обратная связь</a>
+            </div>
+
+            <div class="footer__social">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a class="socisl__link">ВКонтакте</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="socisl__link">Facebook</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="socisl__link">Instagram</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="socisl__link">одноклассники</a>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="footer__copyright">Разработано командой TourAdmin © 2016</p>
+        </div>
     </footer>
     </body>
 </html>
