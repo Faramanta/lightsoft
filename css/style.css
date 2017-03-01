@@ -239,14 +239,16 @@ span {
         margin-right: 30px;
 }
 
-.delete {
+.delete,
+.clear {
     position: relative;
     right: -180px;
     top: -19px;
     cursor: pointer;
 }
 
-.delete::before {
+.delete::before,
+.clear::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -255,7 +257,8 @@ span {
     transform: rotate(45deg);
 }
 
-.delete::after {
+.delete::after,
+.clear::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -273,14 +276,16 @@ span {
 }
 
 .area-country__item {
+    display: none;
     position: relative;
-    display: inline-block;
     padding: 5px 0 5px 35px;
     background: #f2f2f2;
     border-radius: 20px;
     width: 156px;
     box-sizing: border-box;
 }
+
+
 
 .area-country__item::before {
     content: "";
@@ -304,9 +309,17 @@ span {
     background-position: -249px -119px ;
 }
 
+.area-country__item--show {
+    display: inline-block;
+}
+
 .delete--country {
     left: 80px;
     top: -12px;
+}
+
+.delete--country-none {
+    
 }
 
 .area__btn {
@@ -322,7 +335,7 @@ span {
     cursor: pointer;
 }
 
-.ares__btn:hover {
+.area__btn:hover {
     background: #2d9cdb;
     color: #ffffff;
 }
