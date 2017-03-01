@@ -1,3 +1,6 @@
+* {
+    outline: none;
+}
 
 body {
     margin: 0 auto;
@@ -92,6 +95,7 @@ span {
 
 .form {
     background: #ffffff;
+    margin-bottom: 60px;
 }
 
 .selection__list {
@@ -134,14 +138,19 @@ span {
 .form__top {
     position: relative;
     border-bottom: 1px solid #bdbdbd;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
 }
 
 .form__acts {
+    position: relative;
     padding: 0 20px;
 }
 
+.selection-about {
+    margin-bottom: 50px;
+    display: inline-block;
+}
 
 .selection__btn {
     border: none;
@@ -159,9 +168,14 @@ span {
 
 .selection__btn--delete {
     color: #d75a4a;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
 }
 
-.selection__btn-block {
+.selection__btn-block,
+.selection__view-block {
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -181,6 +195,11 @@ span {
     background-position: -61px -32px;
 }
 
+.selection__btn-block--delete {
+    bottom: 17px;
+    left: 73px;
+}
+
 .selection__btn-block--delete::before {
     background-position: -162px -32px;
 
@@ -190,18 +209,19 @@ span {
     display: inline-block;
     position: relative;
     font-size: 12px;
-    margin-right: 130px;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
+    /*margin-left: -20px;*/
 }
 
 .selection__label {
-    margin: 0 0 0 10px;
+    position: absolute;
+    margin: -25px 0 0 10px;
 }
 
 .form__input {
-    position: absolute;
+    /*position: absolute;*/
     top: 25px;
-
+    box-sizing: border-box;
     color: #333333;
     border-radius: 2px;
     border: 1px solid #bdbdbd;
@@ -216,7 +236,7 @@ span {
 .delete {
     position: relative;
     right: -180px;
-    top: 18px;
+    top: -19px;
     cursor: pointer;
 }
 
@@ -283,10 +303,10 @@ span {
     top: -12px;
 }
 
-.ares__btn {
+.area__btn {
     display: inline-block;
     margin-left: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     border: 1px solid #2d9cdb;
     color: #2d9cdb;
     background: #ffffff;
@@ -301,9 +321,96 @@ span {
     color: #ffffff;
 }
 
-.form__input--tour {
+
+.tour {
+    margin-bottom: 50px;
+}
+
+.hotel {
+    margin-bottom: 30px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.form__input--tour,
+.form__input--hotel {
+    
     margin-right: 0;
 }
 
-.selection__block--tour {
+.form__input--tour-date {
+    width: 272px;
+}
+
+.form__input--tour-how {
+    width: 170px;
+}
+
+
+.form__input--tour-mun {
+    width: 214px;
+}
+
+.form__input--tour-cost {
+    width: 264px;
+}
+
+.selection__block--tour,
+.selection__block--hotel {
+    margin-right: -5px;
+}
+
+.form__input--hotel-category {
+    width: 162px;
+}
+
+.form__input--hotel-rating {
+    width: 185px;
+}
+
+.form__input--hotel-eat {
+    width: 123px;
+}
+
+.form__input--hotel-hotel_where {
+    width: 226px;
+}
+
+.btn-view {
+    position: relative;
+    float: right;
+    display: inline-block;
+    top: 0;
+    background: #ff8e41;
+    border: none;
+    padding: 10px 40px 10px 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.selection__view-block {
+    float: right;
+}
+
+.selection__view-block::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    right: 7px;
+    top: 13px;
+    background: url(../img/sprite.png) no-repeat -248px -32px;
+}
+
+.footer {
+    background: #ffffff;
+    padding-top: 30px;
+}
+
+.footer__address, 
+.footer__schedule, 
+.footer__contacts,
+.footer__social {
+    display: inline-block;
+    vertical-align: top;
 }

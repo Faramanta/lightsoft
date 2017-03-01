@@ -60,18 +60,24 @@
                     </div>
                 </div>
 
-                <div class="form__acts">
-                    <div class="selection__block">
-                        <label class="selection__label" for="selection-name" >Название подборки</label>
-                        <input type="text" class="form__input form__input--selection" id="selection-name" value="Подборка 123" >
+                <div class="form__acts clearfix">
+
+                    <div class="selection-about">
+                        <div class="selection__block">
+                            <label class="selection__label" for="selection-name" >Название подборки</label>
+                            <input type="text" class="form__input form__input--selection" id="selection-name" value="Подборка 123" >
+                        </div>
+
+                        <div class="selection__block">
+                            <label class="selection__label" for="selection-city" >Ваш город</label>
+                            <input type="text" class="form__input form__input--selection" id="selection-city" value="Санкт-Петербург" >
+                            <div class="delete"></div>
+                        </div>
                     </div>
 
-                    <div class="selection__block">
-                        <label class="selection__label" for="selection-city" >Ваш город</label>
-                        <input type="text" class="form__input form__input--selection" id="selection-city" value="Санкт-Петербург" >
-                        <div class="delete"></div>
+                    <div class="selection__view-block">
+                        <input type="submit"  class="btn-view" value="Смотреть результаты" >
                     </div>
-
 
                     <p class=" selection__label" >Вы можете задать несколько стран или регионов для одной подборки</p>
                     <div class="area">
@@ -86,56 +92,56 @@
                                 <div class="delete delete--country"></div></li>
                         </ul>
                     </div>
-                    <button class="ares__btn ares__btn--region">Добавить регион</button>
-                    <button class="ares__btn ares__btn--country">Добавить страны</button>
+                    <button class="area__btn area__btn--region">Добавить регион</button>
+                    <button class="area__btn area__btn--country">Добавить страны</button>
 
                     <div class="tour">
                         <div class="selection__block selection__block--tour">
                             <label class="selection__label" for="date-fly">Даты вылета</label>
-                            <input type="text" class="form__input form__input--tour" id="date-fly" value="">
+                            <input type="text" class="form__input form__input--tour form__input--tour-date" id="date-fly" value="">
                         </div>
 
                         <div class="selection__block selection__block--tour">
                             <label class="selection__label" for="how-many">На сколько</label>
-                            <input type="text" class="form__input form__input--tour" id="how-many" value="">
+                            <input type="text" class="form__input form__input--tour form__input--tour-how" id="how-many" value="">
                         </div>
 
                         <div class="selection__block selection__block--tour">
                             <label class="selection__label" for="num">Количество гостей</label>
-                            <input type="text" class="form__input form__input--tour" id="num" value="">
+                            <input type="text" class="form__input form__input--tour form__input--tour-mun" id="num" value="">
                         </div>
 
                         <div class="selection__block selection__block--tour">
                             <label class="selection__label" for="cost">Стоимость тура</label>
-                            <input type="text" class="form__input form__input--tour" id="cost" value="">
+                            <input type="text" class="form__input form__input--tour form__input--tour-cost" id="cost" value="">
                         </div>
                     </div>
 
                     <div class="hotel">
                         <div class="selection__block selection__block--hotel">
                             <label class="selection__label">Категория отелей от</label>
-                            <input type="text" class="form__input form__input--hotel" value="">
+                            <input type="text" class="form__input form__input--hotel-category" value="">
                         </div>
 
                         <div class="selection__block selection__block--hotel">
                             <label class="selection__label">Рейтинг TopHotels</label>
-                            <input type="text" class="form__input form__input" value="">
+                            <input type="text" class="form__input form__input form__input--hotel-rating" value="">
                         </div>
 
                         <div class="selection__block selection__block--hotel">
                             <label class="selection__label">Тип питания</label>
-                            <input type="text" class="form__input form__input" value="">
+                            <input type="text" class="form__input form__input form__input--hotel-eat" value="">
                         </div>
 
                         <div class="selection__block selection__block--hotel">
                             <label class="selection__label">Расположение</label>
-                            <input type="text" class="form__input form__input" value="">
+                            <input type="text" class="form__input form__input form__input--hotel_where" value="">
                         </div>
                     </div>
                     <div class="selection__btn-block selection__btn-block--delete">
                         <input type="submit" value="Удалить подборку" class="selection__btn selection__btn--delete">
                     </div>
-                    <input type="submit" value="Смотреть результаты" >
+                    
                 </div>
             </form>
         </div>
@@ -143,8 +149,9 @@
 
     <footer class="footer">
         <div class="container">
+        <h2>Туристический проект</h2>
             <div class="footer__address">
-                <h2>Туристический проект</h2>
+                
                 <p class="footer__text">Москва, 1-й Щипковский переулок, д.1</p>
                 <a class="footer__link">Показать на карте</a>
             </div>
