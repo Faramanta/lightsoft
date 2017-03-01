@@ -33,6 +33,10 @@ h1 {
     color: #333333;
 }
 
+h2 {
+    color: #323232;
+}
+
 .header {
     background: #008bd4;
     color: #ffffff;    
@@ -46,7 +50,8 @@ h1 {
 }
 
 .menu__list,
-.area-country__list {
+.area-country__list,
+.social__list {
     margin:  0;
     padding: 0;
     list-style: none;
@@ -231,6 +236,7 @@ span {
 .form__input--selection {
     width: 224px;
     box-sizing: border-box;
+        margin-right: 30px;
 }
 
 .delete {
@@ -414,3 +420,47 @@ span {
     display: inline-block;
     vertical-align: top;
 }
+
+.footer__address, 
+.footer__schedule {
+    float: left;
+}
+
+.footer__address {
+    margin-right: 160px;
+}
+
+.footer__contacts,
+.footer__social {
+    float: right;
+   
+}
+
+.footer__social {
+     margin-left: 160px;
+}
+
+.footer__text {
+    margin: 0;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #bdbdbd;
+    border-bottom: 1px dotted #bdbdbd;
+}
+
+.social__link {
+    text-decoration: none;
+    color: #bdbdbd;
+}
+
+.social__link:hover {
+    color: #ff8e41;
+}
+
+.footer__copyright {
+    float: right;
+    margin-bottom: 30px;
+}
+
