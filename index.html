@@ -2,10 +2,19 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>test-page</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+        <script src="dist/js/datepicker.js"></script>
+
     </head>
 <body>
     <header class="header">
@@ -99,18 +108,39 @@
                     <div class="tour">
                         <div class="selection__block selection__block--tour">
                             <label class="selection__label" for="date-fly">Даты вылета</label>
-                            <input type="text" class="form__input form__input--tour form__input--tour-date" id="date-fly" value="">
+                            <input type="text" id="date-fly"
+                                   class="datepicker-here form__input form__input--tour form__input--tour-date"
+                                   data-multiple-dates="2"
+                                   data-multiple-dates-separator=" - "
+                                   data-position="right bottom"/>
                         </div>
 
                         <div class="selection__block selection__block--tour">
-                            <label class="selection__label" for="how-many">На сколько</label>
-                            <input type="text" class="form__input form__input--tour form__input--tour-how" id="how-many" value="">
+                            <label class="selection__label" for="amount">На сколько</label>
+                            <input type="text" id="amount"
+                                   class="range form__input form__input--tour form__input--tour-how"
+                                   readonly >
+                            <span class="night">ночей</span>
+                            <div class="slider-range-block ">
+                                <div id="slider-range" class="slider-range"></div>
+                            </div>
                         </div>
 
                         <div class="selection__block selection__block--tour">
                             <label class="selection__label" for="num">Количество гостей</label>
-                            <input type="text" class="form__input form__input--tour form__input--tour-mun" id="num" value="">
+                            <input type="text" id="num"
+                                   class="num form__input form__input--tour form__input--tour-mun"
+                                   readonly >
+                            <div class="slider-range-max-block slider-range-block--show">
+                                <div id="slider-range-max"></div>
+
+                            </div>
                         </div>
+
+
+
+
+
 
                         <div class="selection__block selection__block--tour">
                             <label class="selection__label" for="cost">Стоимость тура</label>
@@ -144,6 +174,8 @@
                     </div>
                     
                 </div>
+
+
             </form>
         </div>
     </main>
@@ -191,5 +223,6 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
     </body>
 </html>
