@@ -1,5 +1,5 @@
 
-//удалить страну
+//ГіГ¤Г Г«ГЁГІГј Г±ГІГ°Г Г­Гі
 var countryBlock = document.querySelectorAll('.area-country__item');
 
 countryBlock.forEach(function(project) {
@@ -11,7 +11,7 @@ countryBlock.forEach(function(project) {
 });
 
 
-//очистить поле города
+//Г®Г·ГЁГ±ГІГЁГІГј ГЇГ®Г«ГҐ ГЈГ®Г°Г®Г¤Г 
 var clearCity = document.getElementById('selection-city');
 
 clearCity.addEventListener('click', function() {
@@ -43,6 +43,5 @@ sliderScale.addEventListener('focus', function() {
 sliderScale.addEventListener('blur', function() {
     sliderBlock.classList.remove('slider--show');
 	});
-
 
 

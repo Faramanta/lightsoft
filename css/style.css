@@ -22,8 +22,9 @@ body {
 
 .container {
     position: relative;
-    max-width: 1206px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .container-in {
@@ -49,6 +50,7 @@ h2 {
 
 .logo {
     position: absolute;
+    margin-left: -72px;
 }
 
 .menu__list,
@@ -85,6 +87,11 @@ span {
   color: #ffffff;
 }
 
+.datepicker-here span {
+    color: #828282;
+    display: block;
+}
+
 .menu__item:hover .menu__link,
 .menu__item--active .menu__link {
     color: transparent;
@@ -110,8 +117,6 @@ span {
     margin: 0;
     padding: 0;
     list-style: none;
-
-
 }
 
 .selection__item {
@@ -147,6 +152,10 @@ span {
     border-bottom: 1px solid #bdbdbd;
     margin-bottom: 40px;
 
+}
+
+.selection__block--about {
+    width: 220px;
 }
 
 .form__acts {
@@ -188,7 +197,7 @@ span {
     display: inline-block;
 }
 
-.selection__btn-block::before {
+.selection__btn-block::after {
     content: "";
     position: absolute;
     width: 18px;
@@ -198,26 +207,24 @@ span {
     left: 0;
 }
 
-.selection__btn-block--add::before {
+.selection__btn-block--add::after {
     background-position: -61px -32px;
 }
 
 .selection__btn-block--delete {
-    bottom: 17px;
-    left: 73px;
+        float: right;
+    margin-right: 178px;
 }
 
-.selection__btn-block--delete::before {
+.selection__btn-block--delete::after {
     background-position: -162px -32px;
-
 }
 
 .selection__block {
     display: inline-block;
     position: relative;
     font-size: 12px;
-    /*margin-bottom: 50px;*/
-    /*margin-left: -20px;*/
+    margin-right: 30px;
 }
 
 .selection__label {
@@ -226,7 +233,7 @@ span {
 }
 
 .form__input {
-    /*position: absolute;*/
+    width: 100%;
     top: 25px;
     box-sizing: border-box;
     color: #333333;
@@ -236,9 +243,9 @@ span {
 }
 
 .form__input--selection {
-    width: 224px;
+    /*width: 224px;*/
     box-sizing: border-box;
-        margin-right: 30px;
+    /*margin-right: 30px;*/
 }
 
 .delete,
@@ -348,9 +355,10 @@ span {
 }
 
 .hotel {
+    width: 78%;
     margin-bottom: 30px;
-    margin-right: 30px;
     display: inline-block;
+    margin-right: -70px;
 }
 
 .form__input--tour,
@@ -359,21 +367,21 @@ span {
     margin-right: 0;
 }
 
-.form__input--tour-date {
-    width: 272px;
+.selection__block--date {
+    width: 29%;
 }
 
-.form__input--tour-how {
-    width: 170px;
+.selection__block--how {
+    width: 17%;
 }
 
 
-.form__input--tour-mun {
-    width: 214px;
+.selection__block--num {
+    width: 20%;
 }
 
-.form__input--tour-cost {
-    width: 264px;
+.selection__block--cost {
+    width: 35%;
 }
 
 .selection__block--tour,
@@ -381,30 +389,26 @@ span {
     margin-right: -5px;
 }
 
-.form__input--hotel-category {
-    width: 162px;
+.selection__block--category {
+    width: 25%;
 }
 
-.form__input--hotel-rating {
-    width: 185px;
+.selection__block--rating {
+    width: 20%;
 }
 
-.form__input--hotel-eat {
-    width: 123px;
+.selection__block--food {
+    width: 20%;
 }
 
-.form__input--hotel-hotel_where {
-    width: 226px;
+.selection__block--where {
+    width: 25%;
 }
 
 .btn-view {
-    position: relative;
-    float: right;
-    display: inline-block;
-    top: 0;
     background: #ff8e41;
     border: none;
-    padding: 10px 40px 10px 20px;
+    padding: 7px 40px 7px 20px;
     color: #ffffff;
     text-transform: uppercase;
 }
@@ -419,7 +423,7 @@ span {
     width: 20px;
     height: 20px;
     right: 7px;
-    top: 13px;
+    top: 10px;
     background: url(../img/sprite.png) no-repeat -248px -32px;
 }
 
@@ -442,7 +446,7 @@ span {
 }
 
 .footer__address {
-    margin-right: 160px;
+    margin-right: 12%;
 }
 
 .footer__contacts,
@@ -452,7 +456,7 @@ span {
 }
 
 .footer__social {
-     margin-left: 160px;
+     margin-left: 12%;
 }
 
 .footer__text {
@@ -529,3 +533,106 @@ span {
     display: block;
 }
 
+.datepicker--nav {
+    display: none;
+}
+
+.pull-menu{
+    display: none;
+}
+
+@media screen and (max-width: 1130px) {
+.logo {
+        margin-left: 5px;
+    }
+
+    .menu {
+            margin-left: 100px;
+    }
+}
+
+
+@media screen and (max-width: 870px) {
+    .menu__link {
+        padding: 5px 10px 5px 10px;
+    }
+
+    .selection__link {
+        padding: 15px 10px;
+    }
+
+    .footer__address {
+        margin-right: 7%;
+    }
+
+    .footer__social {
+        margin-left: 7%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menu__item {
+        margin: 0;
+    }
+
+    .selection__block--about {
+        margin-right: 10px;
+    }
+
+    .selection__link {
+        padding: 15px 8px;
+        font-size: 13px;
+    }
+
+    .btn-view {
+        padding: 5px 30px 6px 20px;
+    }
+
+    .selection__block--rating {
+        width: 113px;
+    }
+
+    .footer__address {
+        margin-right: 5%;
+    }
+
+    .footer__social {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .selection__block--about {
+        width: 200px;
+    }
+
+    .clear {
+        right: -160px;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    .menu {
+        display: block;
+        margin-left: 100px;
+        text-align: center;
+    }
+
+    .pull-menu {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 3%;
+        position: relative;
+            margin-left: -121px;
+    }
+
+    .menu__item {
+        display: block;
+        text-align: center;
+        margin-left: -119px;
+    }
+}

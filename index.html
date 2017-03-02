@@ -8,19 +8,36 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/jquery-ui-git.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
         <link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
         <script src="dist/js/datepicker.js"></script>
-
+<script>
+            $(function() {
+                var pull        = $('#pull');
+                menu        = $('.menu ul');
+                menuHeight  = menu.height();
+                $(pull).on('click', function(e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
+                $(window).resize(function(){
+                    var w = $(window).width();
+                    if(w > 320 && menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+            });
+        </script>
     </head>
 <body>
     <header class="header">
         <div class="container">
-            <img class="logo" alt="MyTour" src="img/logo.jpg">
+            
             <div class="container-in">
+            <img class="logo" alt="MyTour" src="img/logo.jpg">
                 <nav class="menu"> 
                     <ul class="menu__list">
                         <li class="menu__item">
@@ -39,144 +56,147 @@
                             <a href="#" class="menu__link">Заявка<span>Заявка</span></a>
                         </li>
                     </ul>
-                </nav>   
+                    <a href="#" id="pull" class="pull-menu">Меню</a> 
+                </nav>  
+
             </div>
         </div>         
     </header>
 
     <main class="main">
-        <div class="container-in">
-            <h1>Настройки интересов</h1>
-            <form class="form">
-                <div class="form__top">
-                    <ul class="selection__list">
-                        <li class="selection__item">
-                            <a href="#" class="selection__link">Подборка Васи</a>
-                        </li>
-                        <li class="selection__item">
-                            <a href="#" class="selection__link">Подборка 123</a>
-                        </li>
-                        <li class="selection__item">
-                            <a href="#" class="selection__link">Турция 20.03</a>
-                        </li>
-                        <li class="selection__item">
-                            <a href="#" class="selection__link">Подборка #1</a>
-                        </li>
-                    </ul>
-
-                    <div class="selection__btn-block selection__btn-block--add">
-                        <input type="submit" value="Добавить подборку" class="selection__btn selection__btn--add">
-                    </div>
-                </div>
-
-                <div class="form__acts clearfix">
-
-                    <div class="selection-about">
-                        <div class="selection__block">
-                            <label class="selection__label" for="selection-name" >Название подборки</label>
-                            <input type="text" class="form__input form__input--selection" id="selection-name" value="Подборка 123" >
-                        </div>
-
-                        <div class="selection__block">
-                            <label class="selection__label" for="selection-city" >Ваш город</label>
-                            
-                            <input type="text" class="form__input form__input--selection" id="selection-city" value="Санкт-Петербург" >
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-
-                    <div class="selection__view-block">
-                        <input type="submit"  class="btn-view" value="Смотреть результаты" >
-                    </div>
-
-                    <p class=" selection__label" >Вы можете задать несколько стран или регионов для одной подборки</p>
-                    <div class="area">
-                        <p class="area__text">Юго-восточная Азия</p>
-                        <ul class="area-country__list">
-                            <li class="area-country__item area-country__item--show area-country__item--tailand">Таиланд
-                                <div class="delete delete--country"></div>
+        <div class="container">
+            <div class="container-in">
+                <h1>Настройки интересов</h1>
+                <form class="form">
+                    <div class="form__top">
+                        <ul class="selection__list">
+                            <li class="selection__item">
+                                <a href="#" class="selection__link">Подборка Васи</a>
                             </li>
-                            <li class="area-country__item area-country__item--show area-country__item--vietnam">Вьетнам
-                                <div class="delete delete--country"></div></li>
-                            <li class="area-country__item area-country__item--show area-country__item--indonesia">Индонезия
-                                <div class="delete delete--country"></div></li>
+                            <li class="selection__item">
+                                <a href="#" class="selection__link">Подборка 123</a>
+                            </li>
+                            <li class="selection__item">
+                                <a href="#" class="selection__link">Турция 20.03</a>
+                            </li>
+                            <li class="selection__item">
+                                <a href="#" class="selection__link">Подборка #1</a>
+                            </li>
                         </ul>
-                    </div>
-                    <button class="area__btn area__btn--region">Добавить регион</button>
-                    <button class="area__btn area__btn--country">Добавить страны</button>
 
-                    <div class="tour">
-                        <div class="selection__block selection__block--tour">
-                            <label class="selection__label" for="date-fly">Даты вылета</label>
-                            <input type="text" id="date-fly"
-                                   class="datepicker-here form__input form__input--tour form__input--tour-date"
-                                   data-multiple-dates="2"
-                                   data-multiple-dates-separator=" - "
-                                   data-position="right bottom"/>
+                        <div class="selection__btn-block selection__btn-block--add">
+                            <input type="submit" value="Добавить подборку" class="selection__btn selection__btn--add">
                         </div>
+                    </div>
 
-                        <div class="selection__block selection__block--tour">
-                            <label class="selection__label" for="amount">На сколько</label>
-                            <input type="text" id="amount"
-                                   class="range form__input form__input--tour form__input--tour-how"
-                                   readonly >
-                            <span class="night">ночей</span>
-                            <div class="slider-range-block ">
-                                <div id="slider-range" class="slider-range"></div>
+                    <div class="form__acts clearfix">
+                        <div class="selection-about">
+                            <div class="selection__block selection__block--about">
+                                <label class="selection__label" for="selection-name" >Название подборки</label>
+                                <input type="text" class="form__input form__input--selection" id="selection-name" value="Подборка 123" >
+                            </div>
+
+                            <div class="selection__block selection__block--about">
+                                <label class="selection__label" for="selection-city" >Ваш город</label>
+                                <input type="text" class="form__input form__input--selection" id="selection-city" value="Санкт-Петербург" >
+                                <div class="clear"></div>
                             </div>
                         </div>
 
-                        <div class="selection__block selection__block--tour">
-                            <label class="selection__label" for="num">Количество гостей</label>
-                            <input type="text" id="num"
-                                   class="num form__input form__input--tour form__input--tour-mun"
-                                   readonly >
-                            <div class="slider-range-max-block slider-range-block--show">
-                                <div id="slider-range-max"></div>
+                        <div class="selection__view-block">
+                            <input type="submit"  class="btn-view" value="Смотреть результаты" >
+                        </div>
 
+                        <p class=" selection__label" >Вы можете задать несколько стран или регионов для одной подборки</p>
+                        <div class="area">
+                            <p class="area__text">Юго-восточная Азия</p>
+                            <ul class="area-country__list">
+                                <li class="area-country__item area-country__item--show area-country__item--tailand">Таиланд
+                                    <div class="delete delete--country"></div>
+                                </li>
+                                <li class="area-country__item area-country__item--show area-country__item--vietnam">Вьетнам
+                                    <div class="delete delete--country"></div></li>
+                                <li class="area-country__item area-country__item--show area-country__item--indonesia">Индонезия
+                                    <div class="delete delete--country"></div></li>
+                            </ul>
+                        </div>
+                        <button class="area__btn area__btn--region">Добавить регион</button>
+                        <button class="area__btn area__btn--country">Добавить страны</button>
+
+                        <div class="tour">
+                            <div class="selection__block selection__block--tour selection__block--date">
+                                <label class="selection__label" for="date-fly">Даты вылета</label>
+                                <input type="text" id="date-fly"
+                                       class="datepicker-here form__input form__input--tour form__input--tour-date"
+                                       data-multiple-dates="2"
+                                       data-multiple-dates-separator=" - "
+                                       value="13 января, ПН - 19 января, СБ" />
+                            </div>
+
+                            <div class="selection__block selection__block--tour selection__block--how">
+                                <label class="selection__label" for="amount">На сколько</label>
+                                <input type="text" id="num" class="num datepicker-here form__input form__input--tour form__input--tour-how" 
+                                        data-timepicker="true" 
+                                        data-only-timepicker="true"
+                                        value="7 - 14 ночей"
+                                        data-time-format = "h - i ночей"
+                                        data-max-hours="19"
+                                        data-max-minutes="20"
+                                        start-set-hours="5"
+                                        "/>
+                            </div>
+
+                            <div class="selection__block selection__block--tour selection__block--num">
+                                <label class="selection__label" for="num">Количество гостей</label>
+                                <input type="text" id="num" class="num datepicker-here form__input form__input--tour form__input--tour-num" 
+                                        data-timepicker="true" 
+                                        data-only-timepicker="true"
+                                        value="2 взрослых, 2 детей"
+                                        data-time-format = "h взрослых, i детей"
+                                        data-max-hours="10"
+                                        data-max-minutes="10"
+                                        "/>
+                            </div>
+
+                            <div class="selection__block selection__block--tour selection__block--cost">
+                                <label class="selection__label" for="cost">Стоимость тура</label>
+                                <input type="text" id="cost" class="form__input form__input--tour form__input--tour-cost" value="50 000 Р - 150 000 Р"/>
                             </div>
                         </div>
 
 
+                        <div class="hotel">
+                            <div class="selection__block selection__block--hotel selection__block--category">
+                                <label class="selection__label">Категория отелей от</label>
+                                <input type="text" class="form__input form__input--hotel-category" value="">
+                            </div>
 
+                            <div class="selection__block selection__block--hotel selection__block--rating">
+                                <label class="selection__label">Рейтинг TopHotels</label>
+                                <input type="text" class="form__input form__input form__input--hotel-rating" value="">
+                            </div>
 
+                            <div class="selection__block selection__block--hotel selection__block--food">
+                                <label class="selection__label">Тип питания</label>
+                                <input type="text" class="form__input form__input form__input--hotel-food" value="">
+                            </div>
 
-
-                        <div class="selection__block selection__block--tour">
-                            <label class="selection__label" for="cost">Стоимость тура</label>
-                            <input type="text" class="form__input form__input--tour form__input--tour-cost" id="cost" value="">
+                            <div class="selection__block selection__block--hotel selection__block--where">
+                                <label class="selection__label">Расположение</label>
+                                <input type="text" class="form__input form__input form__input--hotel_where" value="">
+                            </div>
                         </div>
+
+                        <div class="selection__btn-block selection__btn-block--delete">
+                            <input type="submit" value="Удалить подборку" class="selection__btn selection__btn--delete">
+                        </div>
+
+
                     </div>
 
-                    <div class="hotel">
-                        <div class="selection__block selection__block--hotel">
-                            <label class="selection__label">Категория отелей от</label>
-                            <input type="text" class="form__input form__input--hotel-category" value="">
-                        </div>
 
-                        <div class="selection__block selection__block--hotel">
-                            <label class="selection__label">Рейтинг TopHotels</label>
-                            <input type="text" class="form__input form__input form__input--hotel-rating" value="">
-                        </div>
-
-                        <div class="selection__block selection__block--hotel">
-                            <label class="selection__label">Тип питания</label>
-                            <input type="text" class="form__input form__input form__input--hotel-eat" value="">
-                        </div>
-
-                        <div class="selection__block selection__block--hotel">
-                            <label class="selection__label">Расположение</label>
-                            <input type="text" class="form__input form__input form__input--hotel_where" value="">
-                        </div>
-                    </div>
-                    <div class="selection__btn-block selection__btn-block--delete">
-                        <input type="submit" value="Удалить подборку" class="selection__btn selection__btn--delete">
-                    </div>
-                    
-                </div>
-
-
-            </form>
+                </form>
+            </div>
         </div>
     </main>
 
@@ -185,7 +205,6 @@
             <h2>Туристический проект</h2>
             <div class="footer__container clearfix">
                 <div class="footer__address">
-                    
                     <p class="footer__text">Москва, 1-й Щипковский переулок, д.1</p>
                     <a href="#" class="footer__link">Показать на карте</a>
                 </div>
@@ -223,6 +242,5 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
     </body>
 </html>

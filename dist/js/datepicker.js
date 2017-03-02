@@ -67,11 +67,12 @@
             dateTimeSeparator: ' ',
             timeFormat: '',
             minHours: 0,
-            maxHours: 24,
+            maxHours: 20,
             minMinutes: 0,
-            maxMinutes: 59,
+            maxMinutes: 20,
             hoursStep: 1,
             minutesStep: 1,
+
 
             // events
             onSelect: '',
@@ -1481,7 +1482,7 @@
             today: 'Сегодня',
             clear: 'Очистить',
             dateFormat: 'dd.mm.yyyy',
-            timeFormat: 'hh:ii',
+            timeFormat: 'h  i',
             firstDay: 1
         }
     };
