@@ -23,7 +23,6 @@
 <body>
     <header class="header">
         <div class="container">
-            
             <div class="container-in">
             <img class="logo" alt="MyTour" src="img/logo.jpg">
                 <nav class="menu"> 
@@ -96,6 +95,7 @@
 
                         <div class="selection__view-block">
                             <input type="submit"  class="btn-view" value="Смотреть результаты" >
+                            <span class="view">Смотреть</span>
                         </div>
 
                         <p class=" selection__label" >Вы можете задать несколько стран или регионов для одной подборки</p>
@@ -125,16 +125,15 @@
                             </div>
 
                             <div class="selection__block selection__block--tour selection__block--how">
-                                <label class="selection__label" for="amount">На сколько</label>
-                                <input type="text" id="num" class="num datepicker-here form__input form__input--tour form__input--tour-how" 
+                                <label class="selection__label" for="how">На сколько</label>
+                                <input type="text" id="how" class="num datepicker-here form__input form__input--tour form__input--tour-how"
                                         data-timepicker="true" 
                                         data-only-timepicker="true"
                                         value="7 - 14 ночей"
                                         data-time-format = "h - i ночей"
                                         data-max-hours="19"
                                         data-max-minutes="20"
-                                        start-set-hours="5"
-                                        "/>
+                                        />
                             </div>
 
                             <div class="selection__block selection__block--tour selection__block--num">
@@ -146,7 +145,7 @@
                                         data-time-format = "h взрослых, i детей"
                                         data-max-hours="10"
                                         data-max-minutes="10"
-                                        "/>
+                                        />
                             </div>
 
                             <div class="selection__block selection__block--tour selection__block--cost">
@@ -158,23 +157,23 @@
 
                         <div class="hotel">
                             <div class="selection__block selection__block--hotel selection__block--category">
-                                <label class="selection__label">Категория отелей от</label>
-                                <input type="text" class="form__input form__input--hotel-category" value="">
+                                <label for="category" class="selection__label">Категория отелей от</label>
+                                <input type="text" id="category" class="form__input form__input--hotel form__input--hotel-category" value="">
                             </div>
 
                             <div class="selection__block selection__block--hotel selection__block--rating">
-                                <label class="selection__label">Рейтинг TopHotels</label>
-                                <input type="text" class="form__input form__input form__input--hotel-rating" value="">
+                                <label for="rating" class="selection__label">Рейтинг TopHotels</label>
+                                <input type="text" id="rating" class="form__input form__input--hotel form__input--hotel-rating" value="">
                             </div>
 
                             <div class="selection__block selection__block--hotel selection__block--food">
-                                <label class="selection__label">Тип питания</label>
-                                <input type="text" class="form__input form__input form__input--hotel-food" value="">
+                                <label for="food" class="selection__label">Тип питания</label>
+                                <input type="text" id="food" class="form__input form__input--hotel form__input--hotel-food" value="">
                             </div>
 
                             <div class="selection__block selection__block--hotel selection__block--where">
-                                <label class="selection__label">Расположение</label>
-                                <input type="text" class="form__input form__input form__input--hotel_where" value="">
+                                <label for="where" class="selection__label">Расположение</label>
+                                <input type="text" id="where" class="form__input form__input--hotel form__input--hotel_where" value="">
                             </div>
                         </div>
 

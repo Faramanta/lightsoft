@@ -112,7 +112,7 @@ span {
     margin-bottom: 60px;
 }
 
-.selecion-menu {
+.selection-menu {
     display: inline-block;
 }
 
@@ -417,9 +417,16 @@ span {
     color: #ffffff;
     text-transform: uppercase;
 }
+.view {
+    position: absolute;
+    display: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
 
 .selection__view-block {
     float: right;
+
 }
 
 .selection__view-block::after {
@@ -675,20 +682,27 @@ span {
     }
 
     .selection__view-block {
-        width: 53px;
-        overflow: hidden;
-        color: #ff8e41;
+       color: #ff8e41;
         top: 0;
+        text-align: center;
+
     }
 
     .btn-view {
+        width: 150px;
         color: #ff8e41;
         padding: 6px 30px 7px 10px;
     }
 
+    .view {
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+
     .selection__view-block::after {
-        right: calc(50% - 10px);
-        top: 10px;
+        display: none;
     }
 
     .selection-menu {
@@ -754,5 +768,96 @@ span {
 
     .selection__btn-block--delete {
         top: -40px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    .selection__view-block {
+        top: -14px;
+        text-align: center;
+    }
+
+    .selection__block {
+        width: 80%;
+        display: block;
+        margin-top: 6px;
+    }
+    .selection__block--about {
+        width: 75%;
+    }
+
+    .form__input--tour,
+    .form__input--hotel {
+        margin-left: 135px;
+        width: 70%;
+    }
+
+    .form__input--selection {
+        margin-left: 135px;
+        width: 90%;
+    }
+
+    .selection-about,
+    .tour,
+    .hotel {
+        margin-top: -20px;
+    }
+
+
+    .selection-about .selection__label,
+    .tour .selection__label,
+    .hotel .selection__label {
+        margin-top: 0;
+    }
+
+    .clear {
+        right: -323px;
+    }
+
+    .footer__address,
+    .footer__schedule,
+    .footer__contacts,
+    .footer__social {
+        display: block;
+        float: none;
+    }
+
+    .footer__social {
+        margin-left: 0;
+    }
+    
+    .footer__container {
+        padding-left: 25px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .form__input--selection {
+        width: 75%;
+    }
+
+    .clear {
+        right: -290px;
+    }
+
+    .area-country__item--show {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .btn-view {
+        width: 90px;
+    }
+
+    .selection__block--about {
+        /*width: 55%;*/
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .selection__block--about {
+        /*width: 55%;*/
     }
 }
