@@ -1,5 +1,5 @@
 
-//óäàëèòü ñòðàíó
+//удалить страну
 var countryBlock = document.querySelectorAll('.area-country__item');
 
 countryBlock.forEach(function(project) {
@@ -11,17 +11,16 @@ countryBlock.forEach(function(project) {
 });
 
 
-//î÷èñòèòü ïîëå ãîðîäà
+//очистить город
 var clearCity = document.getElementById('selection-city');
 
 clearCity.addEventListener('click', function() {
     clearCity.value='';
 });
 
-
+//слайдеры
 var block = document.querySelector('.slider-range-block');
 var range = document.querySelector('.range');
-
 
 range.addEventListener('focus', function() {
 		block.classList.add('slider-block--show');
@@ -35,7 +34,6 @@ range.addEventListener('blur', function() {
 var sliderBlock = document.querySelector('.slider-range-max-block');
 var sliderScale = document.querySelector('.num');
 
-
 sliderScale.addEventListener('focus', function() {
     sliderBlock.classList.add('slider--show');
 	});
@@ -43,5 +41,8 @@ sliderScale.addEventListener('focus', function() {
 sliderScale.addEventListener('blur', function() {
     sliderBlock.classList.remove('slider--show');
 	});
+
+
+//разворачивающее меню
 
 

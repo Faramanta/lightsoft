@@ -14,22 +14,10 @@
 
         <link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
         <script src="dist/js/datepicker.js"></script>
+        <script src="js/pull-menu.js"></script>
 <script>
-            $(function() {
-                var pull        = $('#pull');
-                menu        = $('.menu ul');
-                menuHeight  = menu.height();
-                $(pull).on('click', function(e) {
-                    e.preventDefault();
-                    menu.slideToggle();
-                });
-                $(window).resize(function(){
-                    var w = $(window).width();
-                    if(w > 320 && menu.is(':hidden')) {
-                        menu.removeAttr('style');
-                    }
-                });
-            });
+           
+
         </script>
     </head>
 <body>
@@ -69,20 +57,23 @@
                 <h1>Настройки интересов</h1>
                 <form class="form">
                     <div class="form__top">
-                        <ul class="selection__list">
-                            <li class="selection__item">
-                                <a href="#" class="selection__link">Подборка Васи</a>
-                            </li>
-                            <li class="selection__item">
-                                <a href="#" class="selection__link">Подборка 123</a>
-                            </li>
-                            <li class="selection__item">
-                                <a href="#" class="selection__link">Турция 20.03</a>
-                            </li>
-                            <li class="selection__item">
-                                <a href="#" class="selection__link">Подборка #1</a>
-                            </li>
-                        </ul>
+                        <div class="selection-menu">
+                            <ul class="selection__list">
+                                <li class="selection__item">
+                                    <a href="#" class="selection__link">Подборка Васи</a>
+                                </li>
+                                <li class="selection__item">
+                                    <a href="#" class="selection__link">Подборка 123</a>
+                                </li>
+                                <li class="selection__item">
+                                    <a href="#" class="selection__link">Турция 20.03</a>
+                                </li>
+                                <li class="selection__item">
+                                    <a href="#" class="selection__link">Подборка #1</a>
+                                </li>
+                            </ul>
+                            <a href="#" id="selection-pull" class="pull-selection-menu">Подборки</a>
+                        </div>
 
                         <div class="selection__btn-block selection__btn-block--add">
                             <input type="submit" value="Добавить подборку" class="selection__btn selection__btn--add">
