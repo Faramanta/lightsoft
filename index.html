@@ -145,6 +145,7 @@
                                         data-time-format = "h взрослых, i детей"
                                         data-max-hours="10"
                                         data-max-minutes="10"
+
                                         />
                             </div>
 
@@ -168,12 +169,18 @@
 
                             <div class="selection__block selection__block--hotel selection__block--food">
                                 <label for="food" class="selection__label">Тип питания</label>
-                                <input type="text" id="food" class="form__input form__input--hotel form__input--hotel-food" value="">
+                                <select class="form__input form__input--hotel form__select--hotel-food" >
+                                    <option>Любой</option>
+                                    <option>Завтраки</option>
+                                </select>
                             </div>
 
                             <div class="selection__block selection__block--hotel selection__block--where">
                                 <label for="where" class="selection__label">Расположение</label>
-                                <input type="text" id="where" class="form__input form__input--hotel form__input--hotel_where" value="">
+                                <select class="form__input form__input--hotel form__select--hotel-food" >
+                                    <option>Пляжные, 1-я линия</option>
+                                    <option>Пляжные, 2-я линия</option>
+                                </select>
                             </div>
                         </div>
 
